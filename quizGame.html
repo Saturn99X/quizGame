@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quiz Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="quizGame.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <progress id="progressBar" value="0" max="26"></progress>
+            <h2 id="question">Question will appear here</h2>
+            <div id="answers-container">
+                <p class="answer" id="answer1"></p>
+                <p class="answer" id="answer2"></p>
+                <p class="answer" id="answer3"></p>
+                <p class="answer" id="answer4"></p>
+            </div>
+            <button id="submit">Next Question</button>
+        </div>
+
+        <script src="quizGame.js" async defer></script>
+    </body>
+</html>

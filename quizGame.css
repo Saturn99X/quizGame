@@ -1,0 +1,118 @@
+/* Body styling */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #000080, rgb(107, 75, 236), #fad0c4);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Container for the quiz */
+.container {
+  background-color: aliceblue;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Question styling */
+#question {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Answer buttons */
+.answer {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: rgb(232, 228, 248);
+  color: rgb(1, 19, 35);
+  font-weight: 900;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
+  border: 2px solid black;
+}
+
+.answer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.answer.correct {
+  background-color: #00c851;  /* Green for correct answer */
+  color: white;
+}
+
+.answer.incorrect {
+  background-color: #ff4444;  /* Red for incorrect answer */
+  color: white;
+}
+
+/* Submit button */
+#submit {
+  background-color: #004E7C;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#submit:hover {
+  background-color: #00BFFF;
+}
+
+/* Progress bar styling */
+#progressBar {
+  color: thistle;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #8f1010;
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+
+  #question {
+      font-size: 1.2rem;
+  }
+
+  .answer {
+      font-size: 1rem;
+      padding: 10px;
+  }
+
+  #submit {
+      font-size: 1rem;
+  }
+}
+
+/* Background animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
